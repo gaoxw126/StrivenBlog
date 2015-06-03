@@ -1,0 +1,49 @@
+---
+title: 2015.6.2  配置Dev 和 Jumbper 机器 
+tags: Wrok,Develop
+---
+
+1. Windows7 安装 XShell
+2. XShell 端  ssh命令  登录 192.168.8.137 , 192.168.8.138
+3. Account/Password : `gaozhongsheng`/`gaozhongsheng` 代码如下:
+
+```shell
+Xshell 5 (Build 0446)
+Copyright (c) 2002-2014 NetSarang Computer, Inc. All rights reserved.
+
+Type `help' to learn how to use Xshell prompt.
+[C:\Users\lenovo]$ ssh gaozhongsheng@192.168.8.137
+
+
+Connecting to 192.168.8.137:22...
+Connection established.
+To escape to local shell, press 'Ctrl+Alt+]'.
+
+Last login: Tue Jun  2 17:00:30 2015 from 192.168.8.2
+[gaozhongsheng@Developer ~]$ ls
+```
+
+4. 192.168.8.137 和 192.168.8.138 查看
+5. git配置: 使用 sz下载138上的私钥 ~/.ssh/id_rsa , rz上传到137上~/.ssh 
+6. 注意:这样拷贝, 137上的权限变为644, 需改回600.
+```shell
+chmod 600 id_rsa
+```
+------------
+------------
+1. UCloud 云监控产品体验
+2. 开通了UCloud账号:5000元
+3. 分别新建Host DB等
+![UhostExperienceWeb][1]  
+Password: gaoxw198%
+UHost 和 EIP 分开付费.
+成功创建后:
+![UHostExpWeb_Suc][2]
+
+4. 使用UHost搭建Web服务器.
+5. 搭建完UHost后,使用,在Console查看监控结果 CPU Memory等, 如果使用监控 则按照提示说明在 UHost中安装相应监控 agent.agent客户端,用于手机数据,传输给后台.
+6. Temp
+
+
+  [1]: ./images/1433313242763.jpg
+  [2]: ./images/1433313510426.jpg
